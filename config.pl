@@ -1,6 +1,8 @@
 # my $home = Jobeet::Models->get('home');
 # print "config\n";
 return {
+    default_view => 'MT',
+    active_days => 30,
     database => [
         'dbi:mysql:arktest','root','',
          {
