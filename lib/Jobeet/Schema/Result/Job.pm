@@ -10,12 +10,16 @@ use Jobeet::Schema::Types;
 __PACKAGE__->table('jobeet_job');
 __PACKAGE__->add_columns(
   id => PK_INTEGER,
+  category_id => INTEGER,
   type => VARCHAR,
+  position => VARCHAR,
   location => VARCHAR,
   description => TEXT,
   how_to_apply => TEXT,
   token => VARCHAR,
-  is_public => TINYINT,
+  is_public => TINYINT(
+    default_value => 1,
+  ),
   is_activated => TINYINT,
   email => VARCHAR,
   expires_at => DATETIME,

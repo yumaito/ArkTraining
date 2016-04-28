@@ -1,6 +1,6 @@
 package Jobeet::Schema::Types;
 use v5.22.1;
-use parent 'Expoter';
+use parent 'Exporter';
 our @EXPORT = qw/PK_INTEGER INTEGER VARCHAR TEXT TINYINT DATETIME/;
 
 sub PK_INTEGER {

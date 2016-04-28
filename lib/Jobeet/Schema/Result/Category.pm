@@ -15,14 +15,15 @@ __PACKAGE__->add_columns(
 __PACKAGE__->set_primary_key('id');
 __PACKAGE__->add_unique_constraint(['name']);
 
-__PACKAGE__->has_many(jobs=>'Jobeet::Schema::Result::Job','category_id');
 __PACKAGE__->has_many(
-  category_affiliate=>'Jobeet::Schema::Result::CategoryAffiliate','category_id'
-  {
-    is_foreign_key_constraint => 0,
-    cascade_delete => 0,
-  },
+    jobs=>'Jobeet::Schema::Result::Job','category_id',
+    {
+      is_foreign_key_constraint   => 0,
+      cascade_delete              => 0,
+    },
 );
+__PACKAGE__->has_many(
+    category_affiliate => 'Jobeet::Schema::Result::CategoryAffiliate', 'category_id');
 __PACKAGE__->many_to_many(affiliates=>category_affiliate=>'affiliate');
 
 1;
