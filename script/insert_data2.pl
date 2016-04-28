@@ -15,11 +15,11 @@ my $job = $jobs_rs->create({
   category_id => $cat_programming->id,
   company => 'Sensio Labs',
   position => 'Web Developer',
-  location => 'Tokyo, Japan',
+  location => 'Beijin, China',
   description => 'Welcome to our company',
   how_to_apply => 'Send your resume to lorem.ipsum [at] dolor.sit',
   is_public => 1,
   is_activated => 1,
-  token => 'job_yet',
+  token => 'job_yet1',
   email => 'job@example.com',
 });
