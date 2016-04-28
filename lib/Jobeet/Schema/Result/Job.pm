@@ -17,15 +17,15 @@ __PACKAGE__->add_columns(
   description => TEXT,
   how_to_apply => TEXT,
   token => VARCHAR,
-  company => VARCHAR(
-    is_nullable => 1
-  ),
-  logo => VARCHAR(
-    is_nullable => 1,
-  ),
-  url => VARCHAR(
-    is_nullable => 1
-  ),
+  # company => VARCHAR(
+  #   is_nullable => 1
+  # ),
+  # logo => VARCHAR(
+  #   is_nullable => 1,
+  # ),
+  # url => VARCHAR(
+  #   is_nullable => 1
+  # ),
   is_public => TINYINT(
     default_value => 1,
   ),
