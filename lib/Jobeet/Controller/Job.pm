@@ -6,7 +6,9 @@ use Jobeet::Models;
 
 sub index :Path {
     my ($self, $c) = @_;
-    $c->stash->{jobs} = models('Schema::Job');
+    $c->stash->{jobs} = models('Schema::Job')->search({
+      expires_at => {'>=',models('Schema')->now->add(days=>-30)},
+    });
 }
 
 # /job/{job_token}(詳細)
