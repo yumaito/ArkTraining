@@ -11,6 +11,7 @@ register Schema => sub {
         or die 'require database config';
 
     $self->ensure_class_loaded('Jobeet::Schema');
+    # print "connect mysql\n";
     Jobeet::Schema->connect(@$conf);
 };
 
