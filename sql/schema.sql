@@ -18,6 +18,11 @@ CREATE TABLE jobeet_category (
   UNIQUE jobeet_category_name (name)
 ) ENGINE=InnoDB;
 
+CREATE TABLE jobeet_something (
+  json_column1 VARCHAR(255) NOT NULL,
+  json_column2 VARCHAR(255) NOT NULL
+);
+
 CREATE TABLE jobeet_job (
   id INTEGER unsigned NOT NULL auto_increment,
   category_id INTEGER unsigned NOT NULL,
