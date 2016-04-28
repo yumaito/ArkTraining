@@ -43,8 +43,10 @@ __PACKAGE__->add_unique_constraint(['token']);
 __PACKAGE__->belongs_to(category=>'Jobeet::Schema::Result::Category','category_id');
 
 sub insert {
-  my $self = shift;
+  # jobのinsert時に呼ばれるサブルーチン
+  my $self = shift;# 引数受け取り
   $self->expires_at(models('Schema')->now->add(days => models('conf')->{active_days}));
+  # 現在時刻+confの{active_days}をexpires_atとする。
   $self->next::method(@_);
 }
 

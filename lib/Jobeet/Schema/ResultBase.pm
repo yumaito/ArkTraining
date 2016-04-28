@@ -8,8 +8,9 @@ use JSON qw/to_json from_json/;
 __PACKAGE__->load_components(qw/InflateColumn::DateTime Core/);
 
 sub insert {
-  my $self = shift;
-  my $now = Jobeet::Schema->now;
+  # insert時に呼ばれるサブルーチン
+  my $self = shift;# 引数を受け取る
+  my $now = Jobeet::Schema->now;# 現在時刻取得
   $self->created_at($now) if $self->can('created_at');
   $self->updated_at($now) if $self->can('updated_at');
 
