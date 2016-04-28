@@ -1,5 +1,7 @@
 SET foreign_key_checks=0;
 
+DROP TABLE IF EXISTS jobeet_affiliate;
+
 CREATE TABLE jobeet_affiliate (
   id INTEGER unsigned NOT NULL auto_increment,
   url VARCHAR(255) NOT NULL,
@@ -11,12 +13,16 @@ CREATE TABLE jobeet_affiliate (
   UNIQUE jobeet_affiliate_email (email)
 ) ENGINE=InnoDB;
 
+DROP TABLE IF EXISTS jobeet_category;
+
 CREATE TABLE jobeet_category (
   id INTEGER unsigned NOT NULL auto_increment,
   name VARCHAR(255) NOT NULL,
   PRIMARY KEY (id),
   UNIQUE jobeet_category_name (name)
 ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS jobeet_job;
 
 CREATE TABLE jobeet_job (
   id INTEGER unsigned NOT NULL auto_increment,
@@ -41,6 +47,8 @@ CREATE TABLE jobeet_job (
   UNIQUE jobeet_job_token (token),
   CONSTRAINT jobeet_job_fk_category_id FOREIGN KEY (category_id) REFERENCES jobeet_category (id) ON UPDATE CASCADE
 ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS jobeet_category_affiliate;
 
 CREATE TABLE jobeet_category_affiliate (
   category_id INTEGER unsigned NOT NULL,
