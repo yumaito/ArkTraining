@@ -20,17 +20,6 @@ my $gd = GitDDL->new(
     ddl_file  => './sql/schema.sql',
     dsn       => models('conf')->{database},
 );
-#######################
-###デバッグ用###########
-#### $gdの中身全部見てみる
-# for my $key (keys %$gd){
-#   print "\$gd->{$key} = ".$gd->{$key}."\n";
-# }
-# print "1--------------------------\n";
-# print $gd->database_version . "\n";
-# print "2--------------------------\n";
-#######################
-#######################
 
 my $db_version = '';
 eval {
