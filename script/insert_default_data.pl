@@ -43,7 +43,7 @@ $jobs_rs->create({
     logo         => 'extreme-sensio.gif',
     url          => 'http://www.extreme-sensio.com/',
     position     => 'Web Designer',
-    location     => 'Paris, France',
+    location     => 'Tokyo, Japan',
     description  => q[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in. Voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpaqui officia deserunt mollit anim id est laborum.],
   how_to_apply   => 'Send your resume to fabien.potencier [at] sensio.com',
     is_public    => 1,
@@ -69,4 +69,11 @@ my $job = $jobs_rs->create({
   is_activated => 1,
   token => 'job_yet1',
   email => 'job@example.com',
+});
+
+# このままだとexpires_atが自動的に30日後になるので
+# 意図的にupdateしてexpires_atを過去の日付にする
+$job->update({
+  created_at => '2016-01-01',
+  expires_at => '2016-01-30',
 });
