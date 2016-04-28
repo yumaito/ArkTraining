@@ -9,5 +9,6 @@ requires 'Text::MicroTemplate::DataSection';
 requires 'DBD::mysql';
 requires 'DateTime';
 requires 'DateTime::Format::SQLite';
+requires 'DateTime::Format::MySQL';
 requires 'GitDDL';
 requires 'Path::Class';
