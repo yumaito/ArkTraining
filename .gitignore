@@ -10,4 +10,4 @@ Build
 /tmp/
 local
 #*
-.snapshot
+*.snapshot
