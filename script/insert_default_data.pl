@@ -4,6 +4,8 @@ use warnings;
 use FindBin::libs;
 
 use Jobeet::Models;
+use DateTime;
+
 
 #create default Categories
 for my $category_name (qw/Design Programming Manager Administrator/) {
@@ -11,8 +13,13 @@ for my $category_name (qw/Design Programming Manager Administrator/) {
 }
 
 # create default Jobs
-my $Programming_category = models('Schema::Category')->find({ name => 'Programming'});
-$Programming_category->add_to_jobs({
+my $prog = models('Schema::Category')->find({ name => 'Programming'});
+my $design = models('Schema::Category')->find({ name => 'Design'});
+#
+my $jobs_rs = models('Schema::Job');
+# my $Programming_category = models('Schema::Category')->find({ name => 'Programming'});
+$jobs_rs->create({
+  category_id => $prog->id,
   type => 'full-time',
   company => 'Sensio Labs',
   logo => 'sensio-labs.gif',
@@ -28,8 +35,9 @@ $Programming_category->add_to_jobs({
   expires_at => '2010-10-10',
 });
 
-my $design_category = models('Schema::Category')->find({ name => 'Design' });
-$design_category->add_to_jobs({
+# my $design_category = models('Schema::Category')->find({ name => 'Design' });
+$jobs_rs->create({
+    category_id => $design->id,
     type         => 'part-time',
     company      => 'Extreme Sensio',
     logo         => 'extreme-sensio.gif',
@@ -42,5 +50,23 @@ $design_category->add_to_jobs({
     is_activated => 1,
     token        => 'job_extreme_sensio',
     email        => 'job@example.com',
-    expires_at   => '2010-10-10',
+    # expires_at   => '2010-10-10',
+});
+
+
+# my $cat_rs = models('Schema::Category');
+
+# my $cat_programming = models('Schema::Category')->find({name=>'Programming'});
+my $job = $jobs_rs->create({
+  type => 'full-time',
+  category_id => $prog->id,
+  company => 'Sensio Labs',
+  position => 'Web Developer',
+  location => 'Beijin, China',
+  description => 'Welcome to our company',
+  how_to_apply => 'Send your resume to lorem.ipsum [at] dolor.sit',
+  is_public => 1,
+  is_activated => 1,
+  token => 'job_yet1',
+  email => 'job@example.com',
 });
