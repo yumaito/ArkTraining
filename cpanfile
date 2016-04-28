@@ -7,3 +7,5 @@ requires 'String::CamelCase';
 requires 'Text::MicroTemplate::Extended';
 requires 'Text::MicroTemplate::DataSection';
 requires 'DBD::mysql';
+requires 'DateTime';
+requires 'DateTime::Format::SQLite';
