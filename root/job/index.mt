@@ -16,7 +16,7 @@
           </a>
         </h1>
       </div>
-
+? my $max_rows = $c->config->{max_jobs_on_homepage};
 ?= include('job/_partial_jobs', $category->get_active_jobs({ rows => $max_rows }));
 ? my $count = $category->get_active_jobs->count;
 ? if((my $rest = $count - $max_rows) > 0){
