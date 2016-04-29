@@ -91,7 +91,7 @@ for my $i (100..130){
   my @programmings2 = List::Util::shuffle @programmings;
   my @locations2 = List::Util::shuffle @locations;
   my @t2 = List::Util::shuffle @types;
-  my $job = $job_rs->create({
+  my $job = $jobs_rs->create({
     type => $t2[0],
     category_id => $prog->id,
     company => "Company $i",
@@ -109,7 +109,7 @@ for my $i (100..130){
 for my $i (100..130){
   my @locations2 = List::Util::shuffle @locations;
   my @t2 = List::Util::shuffle @types;
-  my $job = $job_rs->create({
+  my $job = $jobs_rs->create({
     type => $t2[0],
     category_id => $design->id,
     company => "Company $i",
@@ -127,7 +127,7 @@ for my $i (100..130){
 for my $i (100..130){
   my @locations2 = List::Util::shuffle @locations;
   my @t2 = List::Util::shuffle @types;
-  my $job = $job_rs->create({
+  my $job = $jobs_rs->create({
     type => $t2[0],
     category_id => $manager->id,
     company => "Company $i",
@@ -145,7 +145,7 @@ for my $i (100..130){
 for my $i (100..130){
   my @locations2 = List::Util::shuffle @locations;
   my @t2 = List::Util::shuffle @types;
-  my $job = $job_rs->create({
+  my $job = $jobs_rs->create({
     type => $t2[0],
     category_id => $admin->id,
     company => "Company $i",
