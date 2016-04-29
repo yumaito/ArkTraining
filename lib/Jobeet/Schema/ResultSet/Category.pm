@@ -14,4 +14,16 @@ sub get_with_jobs {
   );
 }
 
+sub get_category_jobs {
+  my $self = shift;
+  my $category = shift;
+  # print "\$category = $category\n";
+  my $cate = models('Schema::Category')->find({ name => $category})->id;
+  # print "\$category = $category\n";
+  # print "id = $cate\n";
+  $self->search(
+    {'jobs.expires_at' => { '>=', models('Schema')->now}},
+    { join => 'jobs',group_by => 'me.name'},
+  );
+}
 1;
