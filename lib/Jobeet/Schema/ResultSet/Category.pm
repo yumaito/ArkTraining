@@ -18,11 +18,12 @@ sub get_category_jobs {
   my $self = shift;
   my $category = shift;
   # print "\$category = $category\n";
-  my $cate = models('Schema::Category')->find({ name => $category})->id;
+  my $cateid = models('Schema::Category')->find({ name => $category})->id;
   # print "\$category = $category\n";
   # print "id = $cate\n";
   $self->search(
-    {'jobs.expires_at' => { '>=', models('Schema')->now}},
+    # {'jobs.expires_at' => { '>=', models('Schema')->now}},
+    {'jobs.category_id' => {'=', $cateid}},
     { join => 'jobs',group_by => 'me.name'},
   );
 }

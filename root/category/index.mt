@@ -13,7 +13,7 @@
         <div class="feed">
           <a href="">Feed</a>
         </div>
-        <h1><?= $category->name ?></h1>
+        <h1><a href="<?= $c->uri_for('category/'.$category->name) ?>"><?= $category->name ?></a></h1>
       </div>
 
       <table class="jobs">
