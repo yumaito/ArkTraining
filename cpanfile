@@ -12,3 +12,5 @@ requires 'DateTime::Format::SQLite';
 requires 'DateTime::Format::MySQL';
 requires 'GitDDL';
 requires 'Path::Class';
+requires 'String::CamelCase';
+requires 'Data::Page::Navigation';
