@@ -51,11 +51,19 @@ sub edit :Chained('job') :PathPart :Form('Jobeet::Form::Job') {
         }
     }
     else {
-      # print "fill------------------\n";
+        print "fill------------------\n";
         $self->form->fill({
             $job->get_columns,
-            category => $job->category->name,
+            category => $job->category->slug,# designとかprogrammingとかの文字列
         });
+        # print $job->{_column_data}
+        # print $job->{_column_data}->{category_id},"\n";
+        # my @keys = keys %$job;
+        # print "@keys \n";
+        # my $h = $job->{_column_data};
+        # my @cdata = keys %$h;
+        # print "@cdata \n";
+        # print "\n";
     }
 }
 

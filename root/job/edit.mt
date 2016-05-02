@@ -37,7 +37,6 @@
 <h1>
 Edit Job
 </h1>
-
 ?= include('job/_partial_form', $form);
 
 ? } # endblock content
