@@ -79,7 +79,7 @@ sub update_from_form {
   my ($self,$form) = @_;#引数をもらう
   print "update----------------\n";
   my $category_id = delete $form->params->{category};#jobeet_jobにcategoryカラムは存在しないので消しておく。
-  my $category = models('Schema::Category')->find({slug=>$category_id});
+  my $category = models('Schema::Category')->find({slug=>$category_id});#slug=$category_idのデータを取得
   my $job = $self->update({
     category_id => $category->id,
     %{$form->params},
