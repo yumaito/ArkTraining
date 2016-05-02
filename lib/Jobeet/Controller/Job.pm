@@ -56,15 +56,14 @@ sub edit :Chained('job') :PathPart :Form('Jobeet::Form::Job') {
             $job->get_columns,
             category => $job->category->slug,# designとかprogrammingとかの文字列
         });
-        # print $job->{_column_data}
-        # print $job->{_column_data}->{category_id},"\n";
-        # my @keys = keys %$job;
-        # print "@keys \n";
-        # my $h = $job->{_column_data};
-        # my @cdata = keys %$h;
-        # print "@cdata \n";
-        # print "\n";
     }
+}
+
+sub publish :Chained('job') :PathPart {
+  my ($self,$c) = @_;
+  my $job = $c->stash->{job};
+  $job->publish;
+  $c->redirect($c->uri_for('/job',$job->token));
 }
 
 # /job/{job_token}/delete (削除)
