@@ -51,6 +51,7 @@ sub edit :Chained('job') :PathPart :Form('Jobeet::Form::Job') {
         }
     }
     else {
+      # print "fill------------------\n";
         $self->form->fill({
             $job->get_columns,
             category => $job->category->name,
