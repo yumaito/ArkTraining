@@ -45,13 +45,13 @@ sub edit :Chained('job') :PathPart :Form('Jobeet::Form::Job') {
     my $job = $c->stash->{job};
 
     if ($c->req->method eq 'POST') {
+        # print "edit------------------\n";
         if ($self->form->submitted_and_valid) {
             $job->update_from_form($self->form);
             $c->redirect( $c->uri_for('/job', $job->token) );
         }
     }
     else {
-        print "fill------------------\n";
         $self->form->fill({
             $job->get_columns,
             category => $job->category->slug,# designとかprogrammingとかの文字列

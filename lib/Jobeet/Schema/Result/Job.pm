@@ -74,4 +74,35 @@ sub publish {
   $self->update({ is_activated => 1});
 }
 
+# update_from_formが足りてない？
+sub update_from_form {
+  my ($self,$form) = @_;#引数をもらう
+  print "update----------------\n";
+  my $category_id = delete $form->params->{category};#jobeet_jobにcategoryカラムは存在しないので消しておく。
+  my $category = models('Schema::Category')->find({slug=>$category_id});
+  my $job = $self->update({
+    category_id => $category->id,
+    %{$form->params},
+  });
+  # $self->next::method(@_);
+  # デバッグ用のprint達
+  # my @temp = keys %$form;
+  # print "\@temp = @temp\n";
+  # print "\$form->{fields} = ",$form->{fields},"\n";
+  #
+  # my @temp2 = keys %{$form->{fields}};
+  # print "\@temp2 = @temp2\n";
+  # print "\$form->{fields}->{url} = ",$form->{fields}->{url},"\n";
+  #
+  #
+  # my @temp3 = keys %{$form->{fields}->{description}->{attr}};
+  # print "\@temp3 = @temp3\n";
+  # # print "\$form->{fields}->{url}->{attr} = ", @{ $form->{fields}->{url}->{attr} },"\n";
+  # # ---------------------------------------
+  # for (@temp3){
+  #   my $value = $form->{fields}->{description}->{attr}->{$_};
+  #   print "{$_} -> $value\n";
+  # }
+}
+
 1;

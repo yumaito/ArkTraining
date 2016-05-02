@@ -19,10 +19,14 @@ sub create_from_form {
     category_id=>$category->id,
     %{ $form->params },
   });
-
+  # デバッグ用のprint達
+  # my %h = %{ $form->params };
+  # for (keys %h){
+  #   print "$_\n";
+  # }
+  # ----------------------
   $txn_guard->commit;
   $job;
 }
 
-# update_from_formが足りてない？
 1;
