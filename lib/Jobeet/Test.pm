@@ -10,11 +10,8 @@ sub import {
   {
     my $dir = tempdir(CLEANUP =>1);
     models('conf')->{database} = [
-      'dbi:mysql:testForArktest','root','',
-      {
-        mysql_enable_utf8 => 1,
-        on_connect_do     => ['SET NAMES utf8'],
-      }
+      "dbi:SQLite:$dir/jobeet-test-database.db",undef,undef,
+      { sqlite_unicode => 1, ignore_version => 1 },
     ];
     models('Schema')->deploy;
   }
