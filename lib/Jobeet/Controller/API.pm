@@ -5,11 +5,9 @@ use Jobeet::Models;
 
 sub token : Chained('/') : PathPart('api') : CaptureArgs(1) {
     my ( $self, $c, $token ) = @_;
-    $c->detach('default') unless length $token == 40;
-    print "clear 40 -----------------------------\n";
+    $c->detach('/default') unless length $token == 40;
     my $affiliate = models('Schema::Affiliate')->single( { token => $token } )
       or die $c->detach('/default');
-    print "clear next -----------------------------\n";
 
     $c->stash->{affiliate} = $affiliate;
 }
