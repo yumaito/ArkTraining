@@ -14,3 +14,4 @@ requires 'GitDDL';
 requires 'Path::Class';
 requires 'String::CamelCase';
 requires 'Data::Page::Navigation';
+requires 'CGI::Simple';
