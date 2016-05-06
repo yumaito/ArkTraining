@@ -37,12 +37,25 @@
         </div>
       </div>
 
+? my @history = @{ $c->session->get('job_history') || [] };
+? if (@history) {
+      <div id="job_history">
+        Recent viewed jobs:
+        <ul>
+? my $i = 0;
+? for my $job (@history) {
+          <li>
+            <?= $job->{position} ?> - <?= $job->{company} ?>
+          </li>
+? last if ++$i == 3;
+? } # endfor $job
+        </ul>
+      </div>
+? } # endif @history
+
       <div id="content">
         <div class="content">
 ? block content => '';
-        </div>
-      </div>
-
       <div id="footer">
         <div class="content">
           <span class="symfony">

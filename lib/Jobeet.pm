@@ -19,7 +19,7 @@ config 'Plugin::Session::State::Cookie' => {
 };
 config 'Plugin::Session::Store::Model' => {
   model => 'cache',
-}
+};
 
 __PACKAGE__->meta->make_immutable;
 
