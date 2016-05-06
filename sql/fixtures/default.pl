@@ -23,7 +23,6 @@ my $design  = models('Schema::Category')->find( { name => 'Design' } );
 my $manager = models('Schema::Category')->find( { name => 'Manager' } );
 my $admin   = models('Schema::Category')->find( { name => 'Administrator' } );
 
-
 # my $Programming_category = models('Schema::Category')->find({ name => 'Programming'});
 $jobs_rs->create(
     {
@@ -176,6 +175,45 @@ for my $i ( 100 .. 130 ) {
             is_activated => 1,
             token        => "admin_$i",
             email        => 'job@example.com',
+        }
+    );
+}
+
+# sql/fixures/default.pl
+{
+    my $affiliate = models('Schema::Affiliate')->create(
+        {
+            url       => 'http://www.sensio-labs.com/',
+            email     => 'fabien.potencier@example.com',
+            is_active => 1,
+        }
+    );
+    $affiliate->add_to_category_affiliate(
+        {
+            category_id =>
+              models('Schema::Category')->find( { name => 'Programming' } )->id,
+        }
+    );
+}
+
+{
+    my $affiliate = models('Schema::Affiliate')->create(
+        {
+            url       => 'http://www.symfony-project.org/',
+            email     => 'fabien.potencier@example.org',
+            is_active => 1,
+        }
+    );
+    $affiliate->add_to_category_affiliate(
+        {
+            category_id =>
+              models('Schema::Category')->find( { name => 'Design' } )->id,
+        }
+    );
+    $affiliate->add_to_category_affiliate(
+        {
+            category_id =>
+              models('Schema::Category')->find( { name => 'Programming' } )->id,
         }
     );
 }
