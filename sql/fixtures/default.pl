@@ -9,11 +9,6 @@ my @locations    = (
     'New York, USA'
 );
 
-my $prog    = models('Schema::Category')->find( { name => 'Programming' } );
-my $design  = models('Schema::Category')->find( { name => 'Design' } );
-my $manager = models('Schema::Category')->find( { name => 'Manager' } );
-my $admin   = models('Schema::Category')->find( { name => 'Administrator' } );
-
 #create default Categories
 for my $category_name (@categories) {
     models('Schema::Category')->create( { name => $category_name } );
@@ -22,6 +17,12 @@ for my $category_name (@categories) {
 # create default Jobs
 #
 my $jobs_rs = models('Schema::Job');
+
+my $prog    = models('Schema::Category')->find( { name => 'Programming' } );
+my $design  = models('Schema::Category')->find( { name => 'Design' } );
+my $manager = models('Schema::Category')->find( { name => 'Manager' } );
+my $admin   = models('Schema::Category')->find( { name => 'Administrator' } );
+
 
 # my $Programming_category = models('Schema::Category')->find({ name => 'Programming'});
 $jobs_rs->create(
