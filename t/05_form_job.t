@@ -36,7 +36,6 @@ use_ok 'Jobeet::Form::Job';
             }
         ),
     );
-    # ok $f->submitted_and_valid, 'form submitted_and_valid ok';
     ok $f->has_error, 'form has error ok';
     like $f->error_message_plain('description'), qr/required/,
       'description required ok';
