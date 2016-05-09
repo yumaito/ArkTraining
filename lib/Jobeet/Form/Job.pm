@@ -5,7 +5,7 @@ use Ark 'Form';
 use Jobeet::Models;
 
 param category => (
-    label   => x("Category"),
+    label   => x('Category'),
     type    => 'ChoiceField',
     choices => [ map { $_->slug => $_->name } models('Schema::Category')->all ],
     constraints => [ 'NOT_NULL', ]

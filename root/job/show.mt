@@ -20,12 +20,12 @@
     <?= $job->description ?>
   </div>
 
-  <h4><?=x('How to apply?')?></h4>
+  <h4><?= x('How to apply?') ?></h4>
 
   <p class="how_to_apply"><?= $job->how_to_apply ?></p>
 
   <div class="meta">
-    <small><?=x('posted on')?> <?= $job->created_at->ymd ?></small>
+    <small><?= x('posted on') ?> <?= $job->created_at->ymd ?></small>
   </div>
 </div>
 

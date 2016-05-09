@@ -53,10 +53,10 @@
 ? } # endif
 
 <div class="pagination_desc">
-  <strong><?= $pager->total_entries ?></strong> <?= x('jobs in this category')?>
+  <strong><?= $pager->total_entries ?></strong> <?= x('jobs in this category') ?>
 
 ? if ($pager->last_page > 1) {
-    - <?= x('page')?> <strong><?= $pager->current_page ?>/<?= $pager->last_page ?></strong>
+    - <?= x('page') ?> <strong><?= $pager->current_page ?>/<?= $pager->last_page ?></strong>
 ? }
 </div>
 
