@@ -19,3 +19,4 @@ requires 'Cache::FastMmap';
 requires 'DateTime::Format::W3CDTF';
 requires 'JSON::Any';
 requires 'Ark::Plugin::I18N';
+requires 'Locale::Maketext::Lexicon';
