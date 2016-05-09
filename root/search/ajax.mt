@@ -2,5 +2,5 @@
 ? if (@jobs) {
 ?= include('job/_partial_jobs',@jobs);
 ? } else {
-No results.
+<?= x('No results.') ?>
 ? }
