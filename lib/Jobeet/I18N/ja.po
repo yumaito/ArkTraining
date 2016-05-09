@@ -198,4 +198,4 @@ msgstr "検索"
 
 #: root/job/edit.mt:31
 msgid "to manage this job in the future."
-msgstr "を今後の編集用にブックマークに追加"
+msgstr "を編集用にブックマークに追加"
