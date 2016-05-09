@@ -17,164 +17,164 @@ msgstr ""
 
 #: root/common/base.mt:68
 msgid "About Jobeet"
-msgstr "Jobeetについて"
+msgstr ""
 
 #: root/job/edit.mt:9
 msgid "Admin"
-msgstr "管理者"
+msgstr ""
 
 #: root/common/base.mt:71
 msgid "Affiliates"
-msgstr "アフィリエイト"
+msgstr ""
 
 #: root/common/base.mt:27
 msgid "Ask for a job"
-msgstr "求人依頼"
+msgstr ""
 
 #: root/common/base.mt:20
 msgid "Ask for people"
-msgstr "Ask for people"
+msgstr ""
 
 #: root/job/edit.mt:31
 msgid "Bookmark this "
-msgstr "この"
+msgstr ""
 
 #: lib/Jobeet/Form/Job.pm:8
 msgid "Category"
-msgstr "カテゴリ"
+msgstr ""
 
 #: lib/Jobeet/Form/Job.pm:26
 msgid "Company"
-msgstr "会社"
+msgstr ""
 
 #: root/job/edit.mt:15
 msgid "Delete"
-msgstr "削除"
+msgstr ""
 
 #: lib/Jobeet/Form/Job.pm:49
 msgid "Description"
-msgstr "備考"
+msgstr ""
 
 #: root/job/edit.mt:12
 msgid "Edit"
-msgstr "編集"
+msgstr ""
 
 #: root/job/edit.mt:38
 msgid "Edit Job"
-msgstr "求人を編集する"
+msgstr ""
 
 #: lib/Jobeet/Form/Job.pm:71
 msgid "Email"
-msgstr "eメール"
+msgstr ""
 
 #: root/common/base.mt:34
 msgid "Enter some keywords (city, country, position, ...)"
-msgstr "キーワードを入力してください（勤務地、国、職種）"
+msgstr ""
 
 #: root/job/edit.mt:20
 msgid "Expired"
-msgstr "期限切れ"
+msgstr ""
 
 #: root/job/edit.mt:22
 msgid "Expires in "
-msgstr "あと"
+msgstr ""
 
 #: root/job/edit.mt:26
 msgid "Extend"
-msgstr "延長する"
+msgstr ""
 
 #: lib/Jobeet/Form/Job.pm:20
 msgid "Freelance"
-msgstr "フリーランス"
+msgstr ""
 
 #: lib/Jobeet/Form/Job.pm:18
 msgid "Full time"
-msgstr "フルタイム"
+msgstr ""
 
 #: lib/Jobeet/Form/Job.pm:60 root/job/show.mt:23
 msgid "How to apply?"
-msgstr "応募方法"
+msgstr ""
 
 #: root/category/show.mt:50
 msgid "Last page"
-msgstr "最後のページ"
+msgstr ""
 
 #: lib/Jobeet/Form/Job.pm:43
 msgid "Location"
-msgstr "勤務地"
+msgstr ""
 
 #: root/job/create.mt:7
 msgid "New Job"
-msgstr "新規求人"
+msgstr ""
 
 #: root/category/show.mt:43 root/category/show.mt:46
 msgid "Next page"
-msgstr "次のページ"
+msgstr ""
 
 #: lib/Jobeet/Form/Job.pm:19
 msgid "Part time"
-msgstr "パートタイム"
+msgstr ""
 
 #: root/common/base.mt:22
 msgid "Post a Job"
-msgstr "求人を投稿"
+msgstr ""
 
 #: root/job/_partial_form.mt:8
 msgid "Preview your job"
-msgstr "確認する"
+msgstr ""
 
 #: root/job/edit.mt:13
 msgid "Publish"
-msgstr "求人を公開"
+msgstr ""
 
 #: root/common/base.mt:45
 msgid "Recent viewed jobs"
-msgstr "最近閲覧した求人"
+msgstr ""
 
 #: lib/Jobeet/Form/Job.pm:15
 msgid "Type"
-msgstr "タイプ"
+msgstr ""
 
 #: root/job/edit.mt:22 root/job/edit.mt:26
 msgid "days"
-msgstr "日"
+msgstr ""
 
 #: root/job/edit.mt:26
 msgid "for another"
-msgstr "あと"
+msgstr ""
 
 #: root/category/show.mt:56
 msgid "jobs in this category"
-msgstr "個の求人がこのカテゴリにあります"
+msgstr ""
 
 #: root/category/show.mt:59
 msgid "page"
-msgstr "ページ"
+msgstr ""
 
 #: lib/Jobeet/Form/Job.pm:78
 msgid "please input %1"
-msgstr "%1 を入力してください"
+msgstr ""
 
 #: lib/Jobeet/Form/Job.pm:80
 msgid "please input %1 as ascii characters without space"
-msgstr "スペースなしで %1 を入力してください"
+msgstr ""
 
 #: lib/Jobeet/Form/Job.pm:79
 msgid "please input %1 as integer"
-msgstr "%1 は数値で入力してください"
+msgstr ""
 
 #: lib/Jobeet/Form/Job.pm:37
 msgid "position"
-msgstr "ポジション"
+msgstr ""
 
 #: root/job/show.mt:28
 msgid "posted on"
-msgstr "投稿日時"
+msgstr ""
 
 #: root/common/base.mt:31
 msgid "search"
-msgstr "検索"
+msgstr ""
 
 #: root/job/edit.mt:31
 msgid "to manage this job in the future."
-msgstr "を今後編集するためにブックマークする"
+msgstr ""
