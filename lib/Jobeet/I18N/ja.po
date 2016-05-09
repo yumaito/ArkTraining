@@ -16,7 +16,7 @@ msgstr ""
 "Language: ja\n"
 "X-Generator: Poedit 1.8.7\n"
 
-#: root/common/base.mt:68
+#: root/common/base.mt:69
 msgid "About Jobeet"
 msgstr "Jobeet について"
 
@@ -24,15 +24,15 @@ msgstr "Jobeet について"
 msgid "Admin"
 msgstr "管理者"
 
-#: root/common/base.mt:71
+#: root/common/base.mt:72
 msgid "Affiliates"
 msgstr "アフィリエイト"
 
-#: root/common/base.mt:27
+#: root/common/base.mt:28
 msgid "Ask for a job"
 msgstr "求人を検索"
 
-#: root/common/base.mt:20
+#: root/common/base.mt:21
 msgid "Ask for people"
 msgstr "Ask for people"
 
@@ -68,7 +68,7 @@ msgstr "求人を編集"
 msgid "Email"
 msgstr "メール"
 
-#: root/common/base.mt:34
+#: root/common/base.mt:35
 msgid "Enter some keywords (city, country, position, ...)"
 msgstr "キーワードを入力してください（勤務地、国、など）"
 
@@ -83,6 +83,10 @@ msgstr "期限切れまであと"
 #: root/job/edit.mt:26
 msgid "Extend"
 msgstr "延長"
+
+#: root/category/show.mt:22
+msgid "First page"
+msgstr "最初のページ"
 
 #: lib/Jobeet/Form/Job.pm:20
 msgid "Freelance"
@@ -120,7 +124,7 @@ msgstr "求人がありません"
 msgid "Part time"
 msgstr "パートタイム"
 
-#: root/common/base.mt:22
+#: root/common/base.mt:23
 msgid "Post a Job"
 msgstr "求人を投稿"
 
@@ -128,17 +132,25 @@ msgstr "求人を投稿"
 msgid "Preview your job"
 msgstr "求人を投稿"
 
+#: root/category/show.mt:27 root/category/show.mt:30
+msgid "Previous page"
+msgstr ""
+
 #: root/job/edit.mt:13
 msgid "Publish"
 msgstr "公開"
 
-#: root/common/base.mt:45
+#: root/common/base.mt:46
 msgid "Recent viewed jobs"
 msgstr "最近見た求人"
 
 #: lib/Jobeet/Form/Job.pm:15
 msgid "Type"
 msgstr "タイプ"
+
+#: root/job/index.mt:24
+msgid "and"
+msgstr "さらに"
 
 #: root/job/edit.mt:22 root/job/edit.mt:26
 msgid "days"
@@ -151,6 +163,10 @@ msgstr "for another"
 #: root/category/show.mt:56
 msgid "jobs in this category"
 msgstr "個の求人"
+
+#: root/job/index.mt:25
+msgid "more..."
+msgstr "個の求人があります"
 
 #: root/category/show.mt:59
 msgid "page"
@@ -176,7 +192,7 @@ msgstr "ポジション"
 msgid "posted on"
 msgstr "投稿日時"
 
-#: root/common/base.mt:31
+#: root/common/base.mt:32
 msgid "search"
 msgstr "検索"
 

@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title><? block title => sub {'Jobeet - Your best job board'} ?></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel = "shortcut icon" href = "/favicon.ico">
     <link rel="alternate" type="application/atom+xml" title="Latest Jobs" href="<?= $c->uri_for('/job/atom')?>" />
     <? block javascripts => '' ?>
