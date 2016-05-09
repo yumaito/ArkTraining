@@ -4,7 +4,7 @@
 
 ? block content => sub {
 
-    <h1>x('New Job')</h1>
+    <h1><?=x('New Job')?></h1>
 
 ?= include('job/_partial_form',$form);
 
