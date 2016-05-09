@@ -23,8 +23,8 @@ param type => (
 );
 
 param company => (
-    label      => x('Company'),
-    type       => 'TextField',
+    label       => x('Company'),
+    type        => 'TextField',
     constraints => [ 'NOT_NULL', ],
 );
 
@@ -34,14 +34,14 @@ param url => (
 );
 
 param position => (
-    label      => x('position'),
-    type       => 'TextField',
+    label       => x('position'),
+    type        => 'TextField',
     constraints => [ 'NOT_NULL', ],
 );
 
 param location => (
-    label      => x('Location'),
-    type       => 'TextField',
+    label       => x('Location'),
+    type        => 'TextField',
     constraints => [ 'NOT_NULL', ],
 );
 
@@ -68,17 +68,17 @@ param how_to_apply => (
 );
 
 param email => (
-    label      => x('Email'),
-    type       => 'TextField',
+    label       => x('Email'),
+    type        => 'TextField',
     constraints => [ 'NOT_NULL', 'EMAIL_LOOSE', ],
 );
 
 sub messages {
-  return {
-    not_null => x('please input [_1]'),
-    int => x('please input [_1] as integer'),
-    ascii => x('please input [_1] as ascii characters without space'),
-  };
+    return {
+        not_null => x('please input [_1]'),
+        int      => x('please input [_1] as integer'),
+        ascii    => x('please input [_1] as ascii characters without space'),
+    };
 }
 
 1;
