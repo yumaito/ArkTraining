@@ -40,23 +40,23 @@
 
 ? if ($pager->next_page) {
     <a href="<?= $c->req->uri_with({ page => $pager->next_page }) ?>">
-      <img src="/images/next.png" alt="Next page" title="Next page" />
+      <img src="/images/next.png" alt="x('Next page')" title="x('Next page')" />
     </a>
 ? } else {
-      <img src="/images/next.png" alt="Next page" title="Next page" />
+      <img src="/images/next.png" alt="x('Next page')" title="x('Next page')" />
 ? }
 
     <a href="<?= $c->req->uri_with({ page => $pager->last_page }) ?>">
-      <img src="/images/last.png" alt="Last page" title="Last page" />
+      <img src="/images/last.png" alt="x('Last page')" title="x('Last page')" />
     </a>
   </div>
 ? } # endif
 
 <div class="pagination_desc">
-  <strong><?= $pager->total_entries ?></strong> jobs in this category
+  <strong><?= $pager->total_entries ?></strong>x(' jobs in this category')
 
 ? if ($pager->last_page > 1) {
-    - page <strong><?= $pager->current_page ?>/<?= $pager->last_page ?></strong>
+    - x('page') <strong><?= $pager->current_page ?>/<?= $pager->last_page ?></strong>
 ? }
 </div>
 

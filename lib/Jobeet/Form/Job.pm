@@ -5,25 +5,25 @@ use Ark 'Form';
 use Jobeet::Models;
 
 param category => (
-    label   => 'Category',
+    label   => x('Category'),
     type    => 'ChoiceField',
     choices => [ map { $_->slug => $_->name } models('Schema::Category')->all ],
     constraints => [ 'NOT_NULL', ]
 );
 
 param type => (
-    label   => 'Type',
+    label   => x('Type'),
     type    => 'ChoiceField',
     choices => [
-        'full-time' => 'Full time',
-        'part-time' => 'Part time',
-        'freelance' => 'Freelance',
+        'full-time' => x('Full time'),
+        'part-time' => x('Part time'),
+        'freelance' => x('Freelance'),
     ],
     constraints => [ 'NOT_NULL', ],
 );
 
 param company => (
-    label      => 'Company',
+    label      => x('Company'),
     type       => 'TextField',
     constraints => [ 'NOT_NULL', ],
 );
@@ -34,19 +34,19 @@ param url => (
 );
 
 param position => (
-    label      => 'position',
+    label      => x('position'),
     type       => 'TextField',
     constraints => [ 'NOT_NULL', ],
 );
 
 param location => (
-    label      => 'Location',
+    label      => x('Location'),
     type       => 'TextField',
     constraints => [ 'NOT_NULL', ],
 );
 
 param description => (
-    label  => 'Description',
+    label  => x('Description'),
     type   => 'TextField',
     widget => 'textarea',
     attr   => {
@@ -57,7 +57,7 @@ param description => (
 );
 
 param how_to_apply => (
-    label  => 'How to apply?',
+    label  => x('How to apply?'),
     type   => 'TextField',
     widget => 'textarea',
     attr   => {
@@ -68,9 +68,17 @@ param how_to_apply => (
 );
 
 param email => (
-    label      => 'Email',
+    label      => x('Email'),
     type       => 'TextField',
     constraints => [ 'NOT_NULL', 'EMAIL_LOOSE', ],
 );
+
+sub messages {
+  return {
+    not_null => x('please input [_1]'),
+    int => x('please input [_1] as integer'),
+    ascii => x('please input [_1] as ascii characters without space'),
+  };
+}
 
 1;
